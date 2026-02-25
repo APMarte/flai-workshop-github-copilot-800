@@ -2,3 +2,4 @@
 We are thrilled that you are here and we hope you are excited to explore the capabilities of Copilot!
 🏋🏽🔥💪🏼🎧 As the gym teacher of Mergington High School you have been tasked with building a fitness app for your students.
 📃 GitHub Copilot documentation: https://docs.github.com/en/copilot
+/create-django-project
