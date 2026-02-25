@@ -1,0 +1,407 @@
+/* ============================================================
+   OctoFit Tracker — Main Styles
+   Color palette:
+     Primary Blue   #0d6efd
+     Deep Navy      #0a1628
+     Accent Purple  #6f42c1
+     Accent Teal    #0dcaf0
+     Success Green  #198754
+     Warning Gold   #ffc107
+     Danger Red     #dc3545
+     Surface White  #ffffff
+     Background     #eef2f7
+============================================================ */
+
+/* ── Global ── */
+body {
+  background: linear-gradient(160deg, #eef2f7 0%, #dde6f5 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a2e;
+}
+
+a {
+  color: #0d6efd;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #6f42c1;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: linear-gradient(90deg, #0a1628 0%, #1a237e 60%, #0d47a1 100%) !important;
+  box-shadow: 0 2px 16px rgba(13, 110, 253, 0.3);
+  padding: 0.6rem 1rem;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-brand img {
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin: 0 2px;
+}
+
+.navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+}
+
+.navbar .nav-link.active {
+  background-color: #0d6efd;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.4);
+}
+
+/* ── Page headings ── */
+.page-heading {
+  color: #0a1628;
+  font-weight: 800;
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 3px solid #0d6efd;
+  background: linear-gradient(90deg, #0d6efd, #6f42c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section wrapper ── */
+.section-wrapper {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 24px rgba(13, 110, 253, 0.09);
+  border: 1px solid rgba(13, 110, 253, 0.08);
+}
+
+/* ── Cards ── */
+.card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.09);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(13, 110, 253, 0.18);
+}
+
+.card-header {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* ── Tables ── */
+.table {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.table thead.table-dark th {
+  background: linear-gradient(90deg, #0a1628 0%, #1a237e 100%);
+  color: #e8f0fe;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.8px;
+  border-bottom: none;
+  padding: 0.85rem 1rem;
+}
+
+.table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #f0f5ff;
+}
+
+.table tbody tr:hover {
+  background-color: #dbeafe !important;
+}
+
+.table td, .table th {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+}
+
+/* ── Badges ── */
+.badge-intensity {
+  font-size: 0.75rem;
+  padding: 0.4em 0.85em;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd, #6f42c1);
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ── Hero / Welcome ── */
+.hero-section {
+  background: linear-gradient(135deg, #0a1628 0%, #1a237e 40%, #0d47a1 70%, #0d6efd 100%);
+  color: white;
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(13, 110, 253, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(111, 66, 193, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-section h1 {
+  font-weight: 900;
+  font-size: 2.6rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.hero-section .lead {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* ── Stat cards ── */
+.stat-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f5ff 100%);
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 3px 14px rgba(13, 110, 253, 0.1);
+  border: 1px solid rgba(13, 110, 253, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(13, 110, 253, 0.22);
+  border-color: #0d6efd;
+}
+
+.stat-card .stat-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.stat-card .stat-label {
+  color: #0a1628;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+/* ── Leaderboard medal rows ── */
+table .table-warning td {
+  background-color: #fff8e1 !important;
+}
+
+table .table-secondary td {
+  background-color: #f0f0f0 !important;
+}
+
+table .table-danger td {
+  background-color: #fdecea !important;
+}
+
+/* ── Footer ── */
+footer {
+  background: linear-gradient(90deg, #0a1628 0%, #1a237e 100%) !important;
+  border-top: 3px solid #0d6efd;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+/* ── Monospace utility ── */
+.fw-mono {
+  font-family: 'Consolas', 'SFMono-Regular', 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Page headings */
+.page-heading {
+  color: #1a1a2e;
+  font-weight: 700;
+  border-bottom: 3px solid #0d6efd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  border-radius: 12px 12px 0 0 !important;
+  font-weight: 600;
+}
+
+/* Tables */
+.table {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.table thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.7px;
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background-color: #e8f0fe;
+}
+
+/* Hero / Welcome section */
+.hero-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hero-section h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.hero-section .lead {
+  opacity: 0.85;
+  font-size: 1.1rem;
+}
+
+/* Badges */
+.badge-intensity {
+  font-size: 0.75rem;
+  padding: 0.4em 0.75em;
+  border-radius: 20px;
+}
+
+/* Leaderboard rank medals */
+.rank-medal {
+  font-size: 1.2rem;
+}
+
+/* Stat cards on the home page */
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.stat-card .stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.stat-card .stat-label {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Section wrapper */
+.section-wrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+

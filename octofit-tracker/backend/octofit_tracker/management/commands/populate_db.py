@@ -18,16 +18,16 @@ class Command(BaseCommand):
 
         # Create Users (superheroes)
         users = [
-            User(name='Tony Stark', email='tony@avengers.com', age=45, fitness_level='Advanced'),
-            User(name='Steve Rogers', email='steve@avengers.com', age=105, fitness_level='Advanced'),
-            User(name='Natasha Romanoff', email='natasha@avengers.com', age=38, fitness_level='Advanced'),
-            User(name='Bruce Banner', email='bruce@avengers.com', age=49, fitness_level='Intermediate'),
-            User(name='Thor Odinson', email='thor@avengers.com', age=1500, fitness_level='Advanced'),
-            User(name='Clark Kent', email='clark@dcheroes.com', age=35, fitness_level='Advanced'),
-            User(name='Diana Prince', email='diana@dcheroes.com', age=800, fitness_level='Advanced'),
-            User(name='Barry Allen', email='barry@dcheroes.com', age=28, fitness_level='Advanced'),
-            User(name='Bruce Wayne', email='bruce@dcheroes.com', age=40, fitness_level='Advanced'),
-            User(name='Arthur Curry', email='arthur@dcheroes.com', age=38, fitness_level='Advanced'),
+            User(name='Tony Stark',       username='ironman',     email='tony@avengers.com',    age=45,   fitness_level='Advanced',     team='Team Marvel'),
+            User(name='Steve Rogers',     username='cap',         email='steve@avengers.com',   age=105,  fitness_level='Advanced',     team='Team Marvel'),
+            User(name='Natasha Romanoff', username='blackwidow',  email='natasha@avengers.com', age=38,   fitness_level='Advanced',     team='Team Marvel'),
+            User(name='Bruce Banner',     username='hulk',        email='bruce@avengers.com',   age=49,   fitness_level='Intermediate', team='Team Marvel'),
+            User(name='Thor Odinson',     username='thor',        email='thor@avengers.com',    age=1500, fitness_level='Advanced',     team='Team Marvel'),
+            User(name='Clark Kent',       username='superman',    email='clark@dcheroes.com',   age=35,   fitness_level='Advanced',     team='Team DC'),
+            User(name='Diana Prince',     username='wonderwoman', email='diana@dcheroes.com',   age=800,  fitness_level='Advanced',     team='Team DC'),
+            User(name='Barry Allen',      username='flash',       email='barry@dcheroes.com',   age=28,   fitness_level='Advanced',     team='Team DC'),
+            User(name='Bruce Wayne',      username='batman',      email='bruce@dcheroes.com',   age=40,   fitness_level='Advanced',     team='Team DC'),
+            User(name='Arthur Curry',     username='aquaman',     email='arthur@dcheroes.com',  age=38,   fitness_level='Advanced',     team='Team DC'),
         ]
         for user in users:
             user.save()

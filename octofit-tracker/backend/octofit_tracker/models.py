@@ -3,9 +3,11 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField(max_length=100)
+    username = models.CharField(max_length=50, unique=True, default='')
     email = models.EmailField(unique=True)
     age = models.IntegerField()
     fitness_level = models.CharField(max_length=50)
+    team = models.CharField(max_length=100, blank=True, default='')
 
     class Meta:
         db_table = 'users'
